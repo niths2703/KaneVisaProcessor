@@ -1,0 +1,17 @@
+Assuming the EMPLOYEE table has the following columns:
+
+EMPLOYEE(
+    ID,
+    NAME,
+    SALARY
+)
+
+Answer:
+
+SELECT
+    e1.NAME AS FIRST_EMPLOYEE,
+    e2.NAME AS SECOND_EMPLOYEE
+FROM EMPLOYEE e1
+JOIN EMPLOYEE e2
+    ON e1.SALARY < e2.SALARY
+ORDER BY e1.ID ASC, e2.SALARY ASC;
